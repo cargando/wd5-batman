@@ -43,27 +43,61 @@ class App extends React.PureComponent {
 
 		}).catch((e) => {
 			console.log("REQUEST ERROR: ". e);
+			this.setState({errState: e});
 		});
 	}
 
 	renderCard = () => {
-		const item = this.state.list[0] ? this.state.list[0] : {};
+		const item = this.state.list[0] ? this.state.list[0].show : {};
 
 		const {
+			id,
 			name = "",
 			url = "",
 			image = {},
+			summary,
+			premiered,
 		} = item;
+
+
+		const watched = false;
+
+		const onChange = () => null;
+		const onViewMore = () => null;
 
 		return (
 			<div>
-			<Card>
-				<CardImg top width="100%" src={ image.medium} alt={ name } />
+			<Card color={ watched ? "primary" : ""} >
+				<CardImg top width="100%" src={ image.medium } alt={ name } />
 				<CardBody>
 					<CardTitle>{ name }</CardTitle>
-					<CardSubtitle>Card subtitle</CardSubtitle>
-					<CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-					<Button>Button</Button>
+					<CardText>
+						<small className="text-muted" dangerouslySetInnerHTML={ { __html: summary } } />
+					</CardText>
+					<CardText>
+						<small className="text-muted">{ premiered }</small> <br />
+						<small><a target="_blank" href={ url }>Visit movie page</a></small> <br /> <br/>
+						<Row>
+							<Col>
+								<Button
+									size="sm"
+									onClick={ () => { onChange(id) }}
+									variant={ watched ? "success" : "outline-secondary" }
+								>
+									{ watched ? "Смотрел" : "Не смотрел"}
+								</Button>
+							</Col>
+							<Col>
+								<Button
+									size="sm"
+									onClick={ () => { onViewMore(id) }}
+									variant="info"
+								>
+									Детали
+								</Button>
+							</Col>
+						</Row>
+					</CardText>
 				</CardBody>
 			</Card>
 			</div>
@@ -72,14 +106,15 @@ class App extends React.PureComponent {
 
 
 	render() {
-
+		console.log("MAIN RND");
 		return (
 			<Container>
+
 				<Row>
 					<Col><h1>Batman Movies</h1></Col>
 				</Row>
 				<Row>
-					<Col>
+					<Col sm="4">
 						{
 							this.renderCard()
 						}
