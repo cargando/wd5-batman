@@ -105,13 +105,6 @@ class App extends React.PureComponent {
 						</div>
 					</Col>
 				</Row>
-				<Row>
-					<Col>
-						{
-							JSON.stringify(this.state.list)
-						}
-					</Col>
-				</Row>
 			</Container>
 
 		);
