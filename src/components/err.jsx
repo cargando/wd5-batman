@@ -3,10 +3,11 @@ import { Alert } from 'reactstrap';
 
 
 function Err(props) {
+
 	return (
-		<div style={ { display: "flex", alignItems: "center", justifyContent: "center"} }>
-			<Alert color="primary">
-				This is a primary alert — check it out!
+		<div style={ { height: "300px",  display: "flex", alignItems: "center", justifyContent: "center"} }>
+			<Alert color="danger">
+				Внимание! Возникла ошибка при запросе данных!
 			</Alert>
 		</div>
 	);

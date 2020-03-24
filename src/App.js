@@ -12,6 +12,8 @@ import {
 	Button,
 } from 'reactstrap';
 
+import Err from './components/err';
+import MovieCard from './components/MovieCard';
 
 
 class App extends React.PureComponent {
@@ -48,65 +50,44 @@ class App extends React.PureComponent {
 	}
 
 	renderCard = () => {
-		const item = this.state.list[0] ? this.state.list[0].show : {};
 
-		const {
-			id,
-			name = "",
-			url = "",
-			image = {},
-			summary,
-			premiered,
-		} = item;
+		if (this.state.list.length === 0) {
+			return null;
+		}
+
+		return this.state.list.map((item) => {
+
+			const {
+				id,
+				name = "",
+				url = "",
+				image = {},
+				summary,
+				premiered,
+			} = item.show || {};
+
+			return <MovieCard
+				id={id}
+				name={ name }
+				url={ url }
+				image={ image.medium }
+				summary={ summary }
+				premiered={ premiered }
+			/>
+		});
 
 
-		const watched = false;
-
-		const onChange = () => null;
-		const onViewMore = () => null;
-
-		return (
-			<div>
-			<Card color={ watched ? "primary" : ""} >
-				<CardImg top width="100%" src={ image.medium } alt={ name } />
-				<CardBody>
-					<CardTitle>{ name }</CardTitle>
-					<CardText>
-						<small className="text-muted" dangerouslySetInnerHTML={ { __html: summary } } />
-					</CardText>
-					<CardText>
-						<small className="text-muted">{ premiered }</small> <br />
-						<small><a target="_blank" href={ url }>Visit movie page</a></small> <br /> <br/>
-						<Row>
-							<Col>
-								<Button
-									size="sm"
-									onClick={ () => { onChange(id) }}
-									variant={ watched ? "success" : "outline-secondary" }
-								>
-									{ watched ? "Смотрел" : "Не смотрел"}
-								</Button>
-							</Col>
-							<Col>
-								<Button
-									size="sm"
-									onClick={ () => { onViewMore(id) }}
-									variant="info"
-								>
-									Детали
-								</Button>
-							</Col>
-						</Row>
-					</CardText>
-				</CardBody>
-			</Card>
-			</div>
-		)
 	};
 
 
 	render() {
 		console.log("MAIN RND");
+
+
+		if (this.state.errState !== null) {
+			return <Err />
+		}
+
 		return (
 			<Container>
 
@@ -114,10 +95,12 @@ class App extends React.PureComponent {
 					<Col><h1>Batman Movies</h1></Col>
 				</Row>
 				<Row>
-					<Col sm="4">
-						{
-							this.renderCard()
-						}
+					<Col sm="12">
+						<div style={ {display: "flex", flexWrap: "wrap"} }>
+							{
+								this.renderCard()
+							}
+						</div>
 					</Col>
 				</Row>
 				<Row>
