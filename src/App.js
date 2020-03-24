@@ -88,6 +88,8 @@ class App extends React.PureComponent {
 			return <Err />
 		}
 
+		const styles = { display: "flex", flexWrap: "wrap" };
+
 		return (
 			<Container>
 
@@ -96,7 +98,7 @@ class App extends React.PureComponent {
 				</Row>
 				<Row>
 					<Col sm="12">
-						<div style={ {display: "flex", flexWrap: "wrap"} }>
+						<div style={ styles }>
 							{
 								this.renderCard()
 							}

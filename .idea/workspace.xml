@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a12d4ef4-78ee-4dda-a00f-e6b213205584" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/MovieCard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/err.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/err.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieCard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
       <workItem from="1584964733528" duration="459000" />
       <workItem from="1585035713008" duration="6000" />
       <workItem from="1585036636560" duration="615000" />
-      <workItem from="1585065659390" duration="3871000" />
+      <workItem from="1585065659390" duration="3952000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1584891799848</created>
@@ -65,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585068586920</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cards">
+      <created>1585070291221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585070291221</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,21 +80,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
     <MESSAGE value="error" />
-    <option name="LAST_COMMIT_MESSAGE" value="error" />
+    <MESSAGE value="cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="cards" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2279" y="35" key="CommitChangelistDialog2" timestamp="1585068586728">
+    <state x="2279" y="35" key="CommitChangelistDialog2" timestamp="1585070291116">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
-    <state x="2279" y="35" key="CommitChangelistDialog2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1585068586728" />
+    <state x="2279" y="35" key="CommitChangelistDialog2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1585070291116" />
     <state x="2553" y="420" key="Github.ShareDialog" timestamp="1584891645900">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state x="2553" y="420" key="Github.ShareDialog/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1584891645900" />
-    <state x="2291" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585068588891">
+    <state x="2291" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585070292575">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
-    <state x="2291" y="254" key="Vcs.Push.Dialog.v2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1585068588891" />
+    <state x="2291" y="254" key="Vcs.Push.Dialog.v2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1585070292575" />
     <state x="2356" y="239" key="run.anything.popup" timestamp="1584890207394">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>

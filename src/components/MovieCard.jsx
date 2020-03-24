@@ -17,8 +17,10 @@ function MovieCard(props) {
 		premiered,
 	} = props;
 
+	const styles = { width: "30%", margin: "15px"};
+
 	return  (
-			<Card style={ {width: "30%", margin: "15px"}} color={ watched ? "primary" : ""} >
+			<Card style={ styles } color={ watched ? "primary" : ""} >
 				<CardImg top width="100%" src={ image } alt={ name } />
 				<CardBody>
 					<CardTitle>{ name }</CardTitle>
