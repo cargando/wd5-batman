@@ -88,7 +88,12 @@ class App extends React.PureComponent {
 
 }
 
-const mapStateToProps = (globalStorage) => { // globalStorage
+// const mapStateToProps = (globalStorage) => ({ // более короткая версия без использования оператора RETURN
+// 		moviesList: globalStorage.app.movies || [],
+// 		errState: globalStorage.app.errState,
+// 	});
+
+const mapStateToProps = (globalStorage) => { // globalStorage => store - одно и то же
 	return {
 		moviesList: globalStorage.app.movies || [],
 		errState: globalStorage.app.errState,
