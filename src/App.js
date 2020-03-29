@@ -23,36 +23,7 @@ class App extends React.PureComponent {
 		this.props.getMovies('batman');
 	}
 
-	renderCard = () => {
-		const { moviesList } = this.props;
 
-		if (moviesList.length === 0) {
-			return null;
-		}
-
-		return moviesList.map((item) => {
-
-			const {
-				id,
-				name = "",
-				url = "",
-				image = {},
-				summary,
-				premiered,
-			} = item.show || {};
-
-			return <MovieCard
-				id={id}
-				name={ name }
-				url={ url }
-				image={ image.medium }
-				summary={ summary }
-				premiered={ premiered }
-			/>
-		});
-
-
-	};
 
 
 	render() {
@@ -63,7 +34,6 @@ class App extends React.PureComponent {
 			return <Err />
 		}
 
-		const styles = { display: "flex", flexWrap: "wrap" };
 
 		return (
 			<Container>
@@ -71,15 +41,10 @@ class App extends React.PureComponent {
 				<Row>
 					<Col><h1>Batman Movies</h1></Col>
 				</Row>
-				<Row>
-					<Col sm="12">
-						<div style={ styles }>
-							{
-								this.renderCard()
-							}
-						</div>
-					</Col>
-				</Row>
+				{
+					this.props.children
+
+				}
 			</Container>
 
 		);

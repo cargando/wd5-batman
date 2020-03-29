@@ -1,6 +1,9 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import {Button, Card, CardBody, CardImg, CardText, CardTitle, Col, Row} from "reactstrap";
+import * as URL from '../router/url';
+
 
 function MovieCard(props) {
 	const watched = false;
@@ -42,13 +45,12 @@ function MovieCard(props) {
 							</Button>
 						</Col>
 						<Col>
-							<Button
-								size="sm"
-								onClick={ () => { onViewMore(id) }}
-								variant="info"
+							<Link
+								to={ `${ URL.DETAILS }/${ id }`}
+								className='btn btn-secondary btn-sm'
 							>
-								Детали
-							</Button>
+								Детали через Link
+							</Link>
 						</Col>
 					</Row>
 				</CardBody>
