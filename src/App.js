@@ -1,61 +1,36 @@
 import React from 'react';
+import * as PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import {
 	Container,
 	Row,
 	Col,
-	Card,
-	CardImg,
-	CardText,
-	CardBody,
-	CardTitle,
-	CardSubtitle,
-	Button,
 } from 'reactstrap';
-
+import * as ActionCreators from './store/action_creatores';
 import Err from './components/err';
 import MovieCard from './components/MovieCard';
 
 
 class App extends React.PureComponent {
 
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			list: [], // список комиксов
-			watched: [], // список смотрел / не смотрел
-			errState: null, // состояние запроса - есть ошибка / все ок
-		}
-
-	}
+	static propTypes = {
+		moviesList: PropTypes.array.isRequired,
+		getMovies: PropTypes.func.isRequired,
+		errState: PropTypes.bool,
+	};
 
 	componentDidMount() {
-		const movies = fetch('https://api.tvmaze.com/search/shows?q=batman');
-
-		movies.then((data) => {
-
-			return data.json();
-
-		}).then((data) => {
-
-			this.setState({
-				list: data || [],
-			});
-			console.log("DATA: ", data);
-
-		}).catch((e) => {
-			console.log("REQUEST ERROR: ". e);
-			this.setState({errState: e});
-		});
+		this.props.getMovies('batman');
 	}
 
 	renderCard = () => {
+		const { moviesList } = this.props;
 
-		if (this.state.list.length === 0) {
+		if (moviesList.length === 0) {
 			return null;
 		}
 
-		return this.state.list.map((item) => {
+		return moviesList.map((item) => {
 
 			const {
 				id,
@@ -84,7 +59,7 @@ class App extends React.PureComponent {
 		console.log("MAIN RND");
 
 
-		if (this.state.errState !== null) {
+		if (this.props.errState !== null) {
 			return <Err />
 		}
 
@@ -113,4 +88,20 @@ class App extends React.PureComponent {
 
 }
 
-export default App;
+const mapStateToProps = (globalStorage) => { // globalStorage
+	return {
+		moviesList: globalStorage.app.movies || [],
+		errState: globalStorage.app.errState,
+	}
+};
+
+const mapDispatchToProps = (dispatcher) => {
+	return {
+		// updateMovies: (payload) =>  dispatcher(ActionCreators.updateMovies(payload)),
+		getMovies: (payload) => dispatcher(ActionCreators.getMovies(payload)),
+	}
+};
+
+const connected = connect(mapStateToProps, mapDispatchToProps)(App);
+
+export default connected;

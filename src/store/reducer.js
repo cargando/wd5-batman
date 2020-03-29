@@ -12,7 +12,7 @@ const initialState = {
 function rootReducer(store = initialState, action) {
 
 	switch (action.type) {
-		case ACT.MOVIES_LOADED:
+		case ACT.UPDATE_MOVIES:
 			return { ...store, movies: action.payload };
 
 		case ACT.ERROR_OCCURRED:
@@ -23,6 +23,9 @@ function rootReducer(store = initialState, action) {
 
 		case ACT.NOT_VIEWED_MOVIE:
 			return { ...store, watched: action.payload };
+
+		case ACT.UPDATE_LOADING:
+			return { ...store, isLoading: action.payload };
 	}
 
 	return store;

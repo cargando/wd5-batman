@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a12d4ef4-78ee-4dda-a00f-e6b213205584" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/action_creatores.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/configure_store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/action_creatores.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/action_creatores.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,8 @@
       <workItem from="1584964733528" duration="459000" />
       <workItem from="1585035713008" duration="6000" />
       <workItem from="1585036636560" duration="615000" />
-      <workItem from="1585065659390" duration="8058000" />
+      <workItem from="1585065659390" duration="8669000" />
+      <workItem from="1585469613975" duration="4094000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1584891799848</created>
@@ -83,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585070368072</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="redux">
+      <created>1585077012262</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585077012262</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,21 +101,22 @@
     <MESSAGE value="initial" />
     <MESSAGE value="error" />
     <MESSAGE value="cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="cards" />
+    <MESSAGE value="redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="redux" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2279" y="35" key="CommitChangelistDialog2" timestamp="1585070367972">
+    <state x="2279" y="35" key="CommitChangelistDialog2" timestamp="1585077012136">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
-    <state x="2279" y="35" key="CommitChangelistDialog2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1585070367972" />
+    <state x="2279" y="35" key="CommitChangelistDialog2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1585077012136" />
     <state x="2553" y="420" key="Github.ShareDialog" timestamp="1584891645900">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state x="2553" y="420" key="Github.ShareDialog/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1584891645900" />
-    <state x="2291" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585070369446">
+    <state x="2291" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585077013854">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
-    <state x="2291" y="254" key="Vcs.Push.Dialog.v2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1585070369446" />
+    <state x="2291" y="254" key="Vcs.Push.Dialog.v2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1585077013854" />
     <state x="2356" y="239" key="run.anything.popup" timestamp="1584890207394">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
