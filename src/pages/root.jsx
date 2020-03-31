@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import * as PropTypes from 'prop-types';
 import { Col, Row } from "reactstrap";
 import MovieCard from "../components/MovieCard";
